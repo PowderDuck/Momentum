@@ -165,3 +165,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cbd89f34f3c10e079048c1f39a8bf51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Sprite>k__BackingField: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
