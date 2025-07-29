@@ -37,7 +37,7 @@ namespace Momentum.Scripts.Managers
                 }
             }
 
-            // TODO: Subscribe to the EventManager.BallsCollided event
+            EventManager.BallsCollided += OnBallsCollided;
         }
 
         private void OnBallsCollided(
@@ -94,6 +94,11 @@ namespace Momentum.Scripts.Managers
                 + new Vector2(
                     (gridPosition.x - ((_gridSize.x - 1f) / 2f)) * _offset.x,
                     (gridPosition.y - ((_gridSize.y - 1f) / 2f)) * _offset.y);
+        }
+
+        private void OnDestroy()
+        {
+            EventManager.BallsCollided -= OnBallsCollided;
         }
     }
 }
