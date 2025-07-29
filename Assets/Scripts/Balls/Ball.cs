@@ -12,7 +12,7 @@ namespace Momentum.Scripts.Balls
 
         protected Rigidbody2D _rigidbody = default!;
 
-        protected void Awake()
+        protected virtual void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
         }
@@ -26,5 +26,7 @@ namespace Momentum.Scripts.Balls
         {
             _direction = direction;
         }
+
+        protected virtual void OnTriggerEnter2D(Collider2D collider) { }
     }
 }
